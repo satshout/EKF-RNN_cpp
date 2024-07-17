@@ -10,7 +10,7 @@ Eigen::MatrixXd id(const Eigen::MatrixXd &x);
 Eigen::MatrixXd id_prime(const Eigen::MatrixXd &x);
 
 // RNN step function
-std::pair<Eigen::MatrixXd, Eigen::MatrixXd> RNNstep(const Eigen::MatrixXd &xt, 
+std::pair<Eigen::VectorXd, Eigen::VectorXd> RNNstep(const Eigen::MatrixXd &xt, 
                                                     const Eigen::MatrixXd &h_prev, 
                                                     const Eigen::MatrixXd &Win, 
                                                     const Eigen::MatrixXd &Wrec, 
@@ -21,7 +21,7 @@ std::pair<Eigen::MatrixXd, Eigen::MatrixXd> RNNstep(const Eigen::MatrixXd &xt,
                                                     Eigen::MatrixXd (*z_actF)(const Eigen::MatrixXd &) = id);
 
 // RNN tangent linear model function
-Eigen::MatrixXd RNNstep_tlm(const Eigen::MatrixXd &xt, 
+Eigen::VectorXd RNNstep_tlm(const Eigen::MatrixXd &xt, 
                             const Eigen::MatrixXd &h_prev, 
                             const Eigen::MatrixXd &Win, 
                             const Eigen::MatrixXd &Wrec, 
