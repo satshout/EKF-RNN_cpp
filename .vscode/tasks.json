@@ -9,6 +9,8 @@
                 "-g",
                 "-I${workspaceFolder}/dependencies/eigen-3.4.0",
                 "${workspaceFolder}/RNN.cpp",
+                "${workspaceFolder}/KalmanFilter.cpp",
+                "${workspaceFolder}/utils.cpp",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
